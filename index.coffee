@@ -11,7 +11,7 @@ module.exports = class BunyanMongo
     size: 32 * 1024 * 1024
 
   constructor: (options = {}) ->
-    _.extend @, options
+    _.extend @options, options
 
   setDB: (db) ->
     options = _.pick @options, 'capped', 'size'
